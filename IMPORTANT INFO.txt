@@ -1,0 +1,106 @@
+Hey
+
+It's Anant,I have created the "Blood Bank System" as per requirements you mentioned to me.
+I would like to Share Some Details on "How it Works!". 
+
+***************************************************How to configure it************************************************************
+
+Well,I have configured it to run on "localhost" and Database configurations are,
+-----------------------------------------------------------------------
+
+db_name='blood_bank'
+db_username='root'
+db_password=''
+host='localhost'
+
+-----------------------------------------------------------------------
+
+The above is already set,but if you feel to change any of the above parameters,please go to this path
+path="BloodBank\admin\Dbase.php"
+In "Dbase.php",You'll find all these parameters and you can change these according to your local system requirements.
+
+NOTE: Please extract the "BloodBank.zip" directly into your "htdocs" directory so your requesting URL can look like this,
+
+IMPORTANT->  URL="http://localhost/BloodBank/login";
+
+Please,this is important to follow because "Requesting URLs" used in Ajax calls considers only this kind of path.
+
+*************************************************************************************************************************************
+
+
+*******************************************************Structure followed************************************************************
+
+I have followed an Organized Approach,more likely MVC approach to implement this Project.
+
+//////////////Backend//////////////////////////
+
+All Backend files are placed inside "admin" directory.
+Backend follows the "MVC Architecture" as for example "Dbase.php" is a model here,"userController.php" is a Controller and "user.php" is a view file.
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+/////////////Front End////////////////////////
+
+
+Each Web Page(Model) has it's own CSS(View) and JS(Controller) file and location of each "Web Pages" are Organized in relevent Directories.
+The "index.html" directly in Blood Bank Folder is only routing the control to login page.
+
+Front end is mainly divided in 4 directories,
+1.Login
+2.Registeration
+3.Hospital
+4.Receiver
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+*******************************************************************************************************************************************************
+
+
+************************************************************It's Working************************************************************************************************
+
+I have created the Database Dummy Data and provided MYSQL file as well in attachments.
+
+////////Log In as a Reciever/////////////////
+
+You can login with one of the many email id
+
+for eg:
+Email ID="anant@gmail.com"  (Blood Group=O+)
+Password="1234"
+
+You can also click on "Available Blood Samples" link above Login Panel to see all Blood Samples Available in all Hospitals even when you are not registered or Logged in. 
+However,You can see login details in "users" table.
+
+You'll be Redirected to receiever page and authenticated.
+Here you can send Blood Sample Requests to the Hospital.
+
+CONDITION: Registered Blood of User should be same as Requesting Blood Group,only then your request will be send else it'll alert an Error. 
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+///////////As a Hospital///////////
+
+Login as a Hospital with one of the many email id
+
+for eg:
+Email ID-"saroj@gmail.com"
+Password-"1234"
+
+You'll be redirected to Hospital Web Page where all blood samples of that particular hospital will be displayed and one can delete them as well.
+There are 3 buttons which does the following,
+
+1."View All" Button displays All Blood Sample Information of All the Registered Hospitals.
+2."Add New" Button Allows a user to Add new Blood Sample Information in there Hospital Database.
+3."View Request" Button redirects the user to "Request" Page where all Blood Samples Request sent to that Hospital by a Receiver will be Displayed.
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+*************************************************************************************************************************************************************************
+
+
+----------Sign out button on every page logs out the user and redirects back to Login page.------------
+
+
+
